@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\levan.shanava\\source\\repos\\MyPartsParser\\MyPartsParser\\MyPartsParser.csproj": {}
+    "C:\\Users\\levan.shanava\\source\\Repos\\MyPartsParser\\MyPartsParser\\MyPartsParser.csproj": {}
   },
   "projects": {
-    "C:\\Users\\levan.shanava\\source\\repos\\MyPartsParser\\MyPartsParser\\MyPartsParser.csproj": {
+    "C:\\Users\\levan.shanava\\source\\Repos\\MyPartsParser\\MyPartsParser\\MyPartsParser.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\levan.shanava\\source\\repos\\MyPartsParser\\MyPartsParser\\MyPartsParser.csproj",
+        "projectUniqueName": "C:\\Users\\levan.shanava\\source\\Repos\\MyPartsParser\\MyPartsParser\\MyPartsParser.csproj",
         "projectName": "MyPartsParser",
-        "projectPath": "C:\\Users\\levan.shanava\\source\\repos\\MyPartsParser\\MyPartsParser\\MyPartsParser.csproj",
+        "projectPath": "C:\\Users\\levan.shanava\\source\\Repos\\MyPartsParser\\MyPartsParser\\MyPartsParser.csproj",
         "packagesPath": "C:\\Users\\levan.shanava\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\levan.shanava\\source\\repos\\MyPartsParser\\MyPartsParser\\obj\\",
+        "outputPath": "C:\\Users\\levan.shanava\\source\\Repos\\MyPartsParser\\MyPartsParser\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\levan.shanava\\AppData\\Roaming\\NuGet\\NuGet.Config",

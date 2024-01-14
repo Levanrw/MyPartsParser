@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1Vr3eRvYULJyF1QdrcTcbrYTrb33WzxluWaatZe3EMMizOPkg9UiFQSmQRbwbrXt62pQDaf6rC/8jRS6xY/MHA==",
+  "dgSpecHash": "Vq3u2rgbzyUbZ4ei0XdAAYt4Wn75nWYWysfeU8ABE/Rs0UJr+wil4w/oJnvhYvtfty9mjoFwTqCZMjiyYB8T2g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\levan.shanava\\source\\repos\\MyPartsParser\\MyPartsParser\\MyPartsParser.csproj",
+  "projectFilePath": "C:\\Users\\levan.shanava\\source\\Repos\\MyPartsParser\\MyPartsParser\\MyPartsParser.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\levan.shanava\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\levan.shanava\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
