@@ -54,7 +54,7 @@ internal class Program
             {
                 try
                 {
-                    var partsListRequest = new PartsListRequest(i, product.Type, 15);
+                    var partsListRequest = new PartsListRequest(i, product.Type, 1000);
                     string requestJson = JsonConvert.SerializeObject(partsListRequest);
                     StringContent httpContent = new StringContent(requestJson, System.Text.Encoding.ASCII, "application/json");
                     HttpResponseMessage partsListMessage = await client.PostAsync($"https://api2.myparts.ge/api/ka/products/get", httpContent);
@@ -76,7 +76,8 @@ internal class Program
                             Phone = _phoneNumberResponse == null ? null : _phoneNumberResponse.PhoneNumber,
                             UserName = _getProductResponse == null ? null : _getProductResponse.data.product_user,
                             Address = _getProductResponse == null ? null : _getProductResponse.data.details.Address,
-                            ProductType = product.Description
+                            ProductType = product.Description,
+                            City = item.loc_id == null ? null : item.loc_id.ToString(),
                         };
                         db.MyPartsUsers.Add(user);
                     }

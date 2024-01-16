@@ -17,6 +17,7 @@
         public string? cat_name { get; set; }
         public string? comment { get; set; }
         public string? phone { get; set; }
+        public int? loc_id { get; set; }
     }
 
 
