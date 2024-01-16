@@ -1,4 +1,6 @@
-﻿namespace MyPartsParser.Model.Response
+﻿using System.Text.Json.Serialization;
+
+namespace MyPartsParser.Model.Response
 {
     public class MyPartsResponse
     { 
@@ -18,11 +20,18 @@
         public string? comment { get; set; }
         public string? phone { get; set; }
         public int? loc_id { get; set; }
+        public string? product_user { get; set; }
+        public Details? details { get; set; }
     }
 
 
     public class Pagination
     {
         public int totalPages { get; set; }
+    }
+    public class Details
+    {
+        [property: JsonPropertyName("address")]
+        public string? Address { get; set; }
     }
 }

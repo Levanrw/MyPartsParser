@@ -6041,19 +6041,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\levan.shanava\\.nuget\\packages\\": {}
+    "C:\\Users\\gio\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\levan.shanava\\source\\Repos\\MyPartsParser\\MyPartsParser\\MyPartsParser.csproj",
+      "projectUniqueName": "C:\\Users\\gio\\Desktop\\Shanava\\MyPartsParser\\MyPartsParser\\MyPartsParser.csproj",
       "projectName": "MyPartsParser",
-      "projectPath": "C:\\Users\\levan.shanava\\source\\Repos\\MyPartsParser\\MyPartsParser\\MyPartsParser.csproj",
-      "packagesPath": "C:\\Users\\levan.shanava\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\levan.shanava\\source\\Repos\\MyPartsParser\\MyPartsParser\\obj\\",
+      "projectPath": "C:\\Users\\gio\\Desktop\\Shanava\\MyPartsParser\\MyPartsParser\\MyPartsParser.csproj",
+      "packagesPath": "C:\\Users\\gio\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gio\\Desktop\\Shanava\\MyPartsParser\\MyPartsParser\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\levan.shanava\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6061,8 +6066,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.pkg.github.com/SpaceBank/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
@@ -6111,7 +6115,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

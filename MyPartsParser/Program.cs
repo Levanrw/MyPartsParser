@@ -32,7 +32,7 @@ internal class Program
             });
             for (int i = 0; i < prooductList.Count; i++)
             {
-                var partsListRequest = new PartsListRequest(1, prooductList[i].Type, 15);
+                var partsListRequest = new PartsListRequest(1, prooductList[i].Type, 1000);
                 string requestJson = JsonConvert.SerializeObject(partsListRequest);
                 StringContent httpContent = new StringContent(requestJson, System.Text.Encoding.Latin1, "application/json");
                 HttpResponseMessage partsListMessage = await client.PostAsync($"https://api2.myparts.ge/api/ka/products/get", httpContent);
@@ -52,6 +52,7 @@ internal class Program
         {
             for (int i = 1; i < pageLength; i++)
             {
+                Console.WriteLine($"Total Page  -  {pageLength}");
                 try
                 {
                     var partsListRequest = new PartsListRequest(i, product.Type, 1000);
@@ -61,25 +62,27 @@ internal class Program
                     var _partListResponse = await partsListMessage.Content.ReadAsStringAsync();
 
                     var productSearchresponse = JsonSerializer.Deserialize<MyPartsResponse>(_partListResponse);
-
+                    int index = 0;
                     foreach (var item in productSearchresponse.data.products)
-                    {
+                    { index++;
                         HttpResponseMessage showPhoneNumberResponse = await client.GetAsync($"https://api2.myparts.ge/api/ka/products/1/{item.product_id}/showFullNumber");
                         var showPhoneNumberResponseBody = await showPhoneNumberResponse.Content.ReadAsStringAsync();
                         var _phoneNumberResponse = JsonSerializer.Deserialize<ShowPhoneNumberResponse>(showPhoneNumberResponseBody, new JsonSerializerOptions { Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping });
 
-                        HttpResponseMessage getProductDetail = await client.GetAsync($"https://api2.myparts.ge/api/ka/products/detail/{item.product_id}");
-                        var getProductDetailResponseBody = await getProductDetail.Content.ReadAsStringAsync();
-                        var _getProductResponse = JsonSerializer.Deserialize<GetProductDetailReponse>(getProductDetailResponseBody, new JsonSerializerOptions { Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping });
+                        //HttpResponseMessage getProductDetail = await client.GetAsync($"https://api2.myparts.ge/api/ka/products/detail/{item.product_id}");
+                        //var getProductDetailResponseBody = await getProductDetail.Content.ReadAsStringAsync();
+                        //var _getProductResponse = JsonSerializer.Deserialize<GetProductDetailReponse>(getProductDetailResponseBody, new JsonSerializerOptions { Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping });
                         var user = new MyPartsUser
                         {
                             Phone = _phoneNumberResponse == null ? null : _phoneNumberResponse.PhoneNumber,
-                            UserName = _getProductResponse == null ? null : _getProductResponse.data.product_user,
-                            Address = _getProductResponse == null ? null : _getProductResponse.data.details.Address,
+                            UserName =item.product_user,//  _getProductResponse.data.product_user,
+                            Address = item.details == null ? null : item.details.Address,//_getProductResponse.data.details.Address,
                             ProductType = product.Description,
                             City = item.loc_id == null ? null : item.loc_id.ToString(),
                         };
                         db.MyPartsUsers.Add(user);
+                        Console.WriteLine($"1000 / {index}");
+                       // Console.ReadLine();
                     }
                     db.SaveChanges();
                 }

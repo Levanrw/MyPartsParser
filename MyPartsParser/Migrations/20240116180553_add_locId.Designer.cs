@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyPartsParser.Domain;
 
 namespace MyPartsParser.Migrations
 {
     [DbContext(typeof(MyPartsContext))]
-    partial class MyPartsContextModelSnapshot : ModelSnapshot
+    [Migration("20240116180553_add_locId")]
+    partial class add_locId
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
