@@ -52,7 +52,6 @@ internal class Program
         {
             for (int i = 1; i < pageLength; i++)
             {
-                Console.WriteLine($"Total Page  -  {pageLength}");
                 try
                 {
                     var partsListRequest = new PartsListRequest(i, product.Type, 1000);
@@ -81,7 +80,7 @@ internal class Program
                             City = item.loc_id == null ? null : item.loc_id.ToString(),
                         };
                         db.MyPartsUsers.Add(user);
-                        Console.WriteLine($"1000 / {index}");
+                        Console.WriteLine($"Pages - {pageLength} / {i} __  1000 / {index}");
                        // Console.ReadLine();
                     }
                     db.SaveChanges();
